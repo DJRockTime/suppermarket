@@ -1,0 +1,61 @@
+@import './normalize.css';
+
+/* :root -> 获取根元素html */
+:root {
+    /* css里面定义变量的方式 */
+    --color-text: #666;
+    --color-height-text: #ff5777;
+    --color-tint: #ff8198;
+    --color-pink: #ff8198;
+    --color-background: #fff;
+    --font-size: 14px;
+    --line-height: 1.5;
+
+     /* css里面定义变量的方式 */
+    /* --large-size: 50px; */
+    /* font-size: var(--large-size) */
+    /* tintColor 整体的背景颜色  tint 着色*/ 
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '';
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background: var(--color-background);
+    width: 100%;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.clear-fix::after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear-fix {
+    zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
