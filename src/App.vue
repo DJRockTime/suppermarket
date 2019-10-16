@@ -2,11 +2,11 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-09-30 08:46:11
- * @LastEditTime: 2019-10-14 12:15:59
+ * @LastEditTime: 2019-10-16 00:45:38
  * @LastEditors: Please set LastEditors
  -->
 <template>
-  <div id="Login">
+  <div id="app">
     <router-view></router-view>
   </div>
 </template>
@@ -14,7 +14,7 @@
 <script>
 import Login from '@/components/login/Login'
 
-import { getHomeMultidata } from './network/home'
+import { getHomeMultidata, getUserData } from './network/home'
 export default {
   name: 'App',
   data() {
@@ -23,10 +23,14 @@ export default {
     }
   },
   created() {
-    getHomeMultidata()
-      .then(res => {
-        console.log(res)
-      })
+    // getUserData()
+    // .then(res => {
+    //   console.log(res)
+    // })
+    // getHomeMultidata()
+    //   .then(res => {
+    //     console.log(res)
+    //   })
   },
   components: {
     Login,
@@ -35,5 +39,7 @@ export default {
 </script>
 
 <style>
-
+  #app {
+    height: 100%;
+  }
 </style>
